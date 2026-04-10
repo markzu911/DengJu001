@@ -80,6 +80,10 @@ export default function Page() {
     setResultImage(null);
 
     try {
+      if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
+        throw new Error('未配置 Gemini API Key。请在 Vercel 的 Environment Variables 中添加 NEXT_PUBLIC_GEMINI_API_KEY。');
+      }
+
       const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY });
 
       setLoadingStep('Analyzing lamp details...');
