@@ -1,0 +1,5 @@
+{
+  "name": "灯具-GPT",
+  "description": "Upload a room photo and a lamp product photo to generate a realistic interior preview.",
+  "requestFramePermissions": []
+}
